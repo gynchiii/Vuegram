@@ -12,12 +12,12 @@
       <q-item>
         <q-item-section avatar>
           <q-avatar>
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+            <img src="https://lh3.googleusercontent.com/ogw/ADea4I64PuJ21nHejw7x6_4OWa28pNTGyhWjU4_ewGUWeGQ=s32-c-mo">
           </q-avatar>
         </q-item-section>
 
         <q-item-section>
-          <q-item-label class="text-bold">Brittoiago</q-item-label>
+          <q-item-label class="text-bold">Joeyzada</q-item-label>
           <q-item-label caption>
             {{post.location}}
           </q-item-label>
@@ -29,7 +29,7 @@
         :src="post.imageUrl"/>
       <q-card-section>
         <div>{{post.caption}}</div>
-        <div class="text-caption text-grey">{{post.date}}</div>
+        <div class="text-caption text-grey">{{ relativeDate(post) }} ago</div>
       </q-card-section>
     </q-card>
 </div>
@@ -38,14 +38,14 @@
   <q-item class="fixed">
         <q-item-section avatar>
           <q-avatar size="48px">
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+            <img src="https://lh3.googleusercontent.com/ogw/ADea4I64PuJ21nHejw7x6_4OWa28pNTGyhWjU4_ewGUWeGQ=s32-c-mo">
           </q-avatar>
         </q-item-section>
 
         <q-item-section>
-          <q-item-label class="text-bold">Brittoiago</q-item-label>
+          <q-item-label class="text-bold">Joeyzada</q-item-label>
           <q-item-label caption>
-            Iago Britto
+            Joey Diab aka(git/gynchiii)
           </q-item-label>
         </q-item-section>
       </q-item>
@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import { date } from 'quasar'
+import { formatDistance } from 'date-fns'
 
 export default {
   name: 'PageHome',
@@ -94,9 +94,10 @@ export default {
       ]
     }
   },
-  filters: {
-    niceDate(value) {
-      return date.formatDate(value, 'YYYY-MM-DDTHH:mm:ss.SSSZ')
+  methods: {
+    relativeDate({ date }) {
+      let formatDate = new Date(date);
+      return formatDistance(formatDate, new Date());
     }
   }
 }

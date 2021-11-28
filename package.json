@@ -1,10 +1,10 @@
 {
   "name": "quasargram",
   "version": "0.0.1",
-  "description": "A instagram replica.",
+  "description": "Clone of Instagram, Vue / Quasar.",
   "productName": "quasargram",
-  "author": "Britto",
-  "private": true,
+  "author": "Joey Diab (git/gynchiii)",
+  "private": false,
   "scripts": {
     "test": "echo \"No test specified\" && exit 0"
   },
@@ -12,7 +12,7 @@
     "@quasar/extras": "^1.0.0",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "date-fns": "^2.24.0",
+    "date-fns": "^2.26.0",
     "md-gum-polyfill": "^1.0.0",
     "quasar": "^2.0.0"
   },

@@ -1,6 +1,6 @@
-# quasargram (quasargram)
+# Vuegram (Vuegram)
 
-A instagram replica.
+A instagram replica w Vue w Quasar.
 
 ## Install the dependencies
 ```bash
